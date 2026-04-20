@@ -15,29 +15,33 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f4f4f4;
-color:#222;
+background:#ffffff;
+color:#111;
 }
 
 /* HEADER */
 header{
-background:#5b0000;
+background:#0b3d2e; /* DARK GREEN */
 color:white;
 text-align:center;
-padding:20px;
+padding:25px;
+border-bottom:5px solid gold;
 }
 
 header img{
-width:70px;
-margin-bottom:8px;
+width:140px;   /* BIG LOGO */
+margin-bottom:10px;
 }
 
 header h1{
-font-size:26px;
+font-size:28px;
+color:gold;
 }
 
 header p{
 font-size:14px;
+color:white;
+opacity:0.9;
 }
 
 /* NAV */
@@ -48,6 +52,7 @@ text-align:center;
 position:sticky;
 top:0;
 z-index:1000;
+border-bottom:2px solid gold;
 }
 
 nav a{
@@ -65,7 +70,7 @@ color:gold;
 /* HERO */
 .hero{
 background:url('T-Front.JPG') center/cover no-repeat;
-height:420px;
+height:430px;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -73,15 +78,17 @@ text-align:center;
 }
 
 .hero-box{
-background:rgba(0,0,0,0.6);
+background:rgba(0,0,0,0.65);
 color:white;
 padding:25px;
 border-radius:12px;
 max-width:700px;
+border:2px solid gold;
 }
 
 .hero-box h2{
 font-size:30px;
+color:gold;
 }
 
 .btn{
@@ -106,7 +113,7 @@ margin:auto;
 text-align:center;
 font-size:26px;
 margin-bottom:20px;
-color:#5b0000;
+color:#0b3d2e;
 }
 
 /* TOUR */
@@ -117,17 +124,17 @@ gap:15px;
 }
 
 .card{
-background:white;
+background:#fff;
 padding:18px;
 border-radius:12px;
 text-align:center;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
-cursor:pointer;
-transition:0.3s;
+border:1px solid #ddd;
 }
 
-.card:hover{
-transform:scale(1.05);
+.card h3{
+color:#0b3d2e;
+margin-bottom:5px;
 }
 
 /* MASCOT */
@@ -137,8 +144,9 @@ margin-top:20px;
 }
 
 .mascot img{
-width:150px;
+width:160px;
 border-radius:10px;
+border:2px solid gold;
 }
 
 /* GALLERY */
@@ -155,10 +163,12 @@ object-fit:cover;
 border-radius:10px;
 cursor:pointer;
 transition:0.3s;
+border:2px solid #eee;
 }
 
 .gallery img:hover{
 transform:scale(1.03);
+border:2px solid gold;
 }
 
 /* CONTACT */
@@ -169,11 +179,12 @@ gap:15px;
 }
 
 .contact-card{
-background:white;
+background:#fff;
 padding:18px;
 border-radius:12px;
 text-align:center;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
+border-top:3px solid gold;
 }
 
 /* MAP */
@@ -182,6 +193,16 @@ width:100%;
 height:300px;
 border:0;
 border-radius:12px;
+}
+
+/* FOOTER */
+footer{
+background:#0b3d2e;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+border-top:3px solid gold;
 }
 
 /* MODAL */
@@ -204,24 +225,15 @@ max-height:80%;
 border-radius:10px;
 }
 
-/* FOOTER */
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:30px;
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- HEADER WITH BIG LOGO -->
 <header>
 <img src="PNG Parliament Logo-01.png">
-<h1>National Parliament PNG</h1>
+<h1>National Parliament of Papua New Guinea</h1>
 <p>Virtual Tour & Public Information Portal</p>
 </header>
 
@@ -255,38 +267,38 @@ margin-top:30px;
 
 <div class="grid">
 
-<div class="card" onclick="openRoom('Main Chamber')">
-🏛 <h3>Main Chamber</h3>
-<p>Debates & law making</p>
+<div class="card">
+<h3>Main Chamber</h3>
+<p>Debates and law making</p>
 </div>
 
-<div class="card" onclick="openRoom('Grand Hall')">
-🎤 <h3>Grand Hall</h3>
+<div class="card">
+<h3>Grand Hall</h3>
 <p>Official ceremonies</p>
 </div>
 
-<div class="card" onclick="openRoom('Committee Rooms')">
-📑 <h3>Committee Rooms</h3>
+<div class="card">
+<h3>Committee Rooms</h3>
 <p>Policy discussions</p>
 </div>
 
-<div class="card" onclick="openRoom('Speaker Office')">
-👔 <h3>Speaker Office</h3>
+<div class="card">
+<h3>Speaker Office</h3>
 <p>Leadership area</p>
 </div>
 
 </div>
 </section>
 
-<!-- GALLERY -->
+<!-- GALLERY (LOGO REMOVED) -->
 <section id="gallery">
 <h2 class="title">Gallery</h2>
 
 <div class="gallery">
-<img src="T-Front.JPG" onclick="openImg(this)">
-<img src="Mascot" onclick="openImg(this)">
-<img src="PNG Parliament Logo-01.png" onclick="openImg(this)">
-<img src="T-Front.JPG" onclick="openImg(this)">
+<img src="T-Front.JPG">
+<img src="Mascot">
+<img src="T-Front.JPG">
+<img src="Mascot">
 </div>
 
 </section>
@@ -305,21 +317,10 @@ margin-top:30px;
 
 <div class="contact-grid">
 
-<div class="contact-card">
-📍<br>Port Moresby, PNG
-</div>
-
-<div class="contact-card">
-📞<br>(+675) 327 7000
-</div>
-
-<div class="contact-card">
-📧<br>info@parliament.gov.pg
-</div>
-
-<div class="contact-card">
-🕒<br>8:30 AM – 4:30 PM
-</div>
+<div class="contact-card">📍<br>Port Moresby, PNG</div>
+<div class="contact-card">📞<br>(+675) 327 7000</div>
+<div class="contact-card">📧<br>info@parliament.gov.pg</div>
+<div class="contact-card">🕒<br>8:30 AM – 4:30 PM</div>
 
 </div>
 
@@ -331,27 +332,9 @@ margin-top:30px;
 </footer>
 
 <!-- MODAL -->
-<div class="modal" id="modal" onclick="closeModal()">
+<div class="modal" id="modal" onclick="this.style.display='none'">
 <img id="modalImg">
 </div>
-
-<!-- SCRIPT -->
-<script>
-
-function openRoom(name){
-alert("Entering " + name + " (Virtual content can be expanded here)");
-}
-
-function openImg(img){
-document.getElementById("modal").style.display="flex";
-document.getElementById("modalImg").src=img.src;
-}
-
-function closeModal(){
-document.getElementById("modal").style.display="none";
-}
-
-</script>
 
 </body>
 </html>
