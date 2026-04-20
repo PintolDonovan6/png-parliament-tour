@@ -20,23 +20,24 @@ color:#222;
 line-height:1.6;
 }
 
+/* HEADER */
 header{
 background:linear-gradient(90deg,#4b0000,#7a0000);
 color:white;
 padding:25px;
 text-align:center;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
 header h1{
-font-size:34px;
-margin-bottom:8px;
+font-size:32px;
 }
 
 header p{
-font-size:18px;
+font-size:16px;
+margin-top:5px;
 }
 
+/* NAV */
 nav{
 background:#111;
 padding:15px;
@@ -49,164 +50,158 @@ z-index:999;
 nav a{
 color:white;
 text-decoration:none;
-margin:0 15px;
+margin:0 12px;
 font-weight:bold;
-transition:0.3s;
 }
 
 nav a:hover{
 color:gold;
 }
 
+/* HERO */
 .hero{
 background:url('parliament.jpg') center/cover no-repeat;
-height:500px;
+height:480px;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:20px;
 }
 
-.overlay{
+.hero-box{
 background:rgba(0,0,0,0.6);
-padding:35px;
-border-radius:15px;
-max-width:750px;
+padding:30px;
+border-radius:12px;
 color:white;
-animation:fadeIn 2s;
+max-width:700px;
 }
 
-.overlay h2{
-font-size:44px;
+.hero-box h2{
+font-size:38px;
+margin-bottom:10px;
+}
+
+.hero-box p{
+font-size:18px;
 margin-bottom:15px;
-}
-
-.overlay p{
-font-size:20px;
-margin-bottom:25px;
 }
 
 .btn{
 display:inline-block;
-padding:14px 30px;
+padding:12px 25px;
 background:gold;
 color:black;
 font-weight:bold;
-text-decoration:none;
 border-radius:8px;
-transition:0.3s;
+text-decoration:none;
+margin:5px;
 }
 
-.btn:hover{
-transform:scale(1.05);
-}
-
+/* SECTIONS */
 section{
 padding:60px 20px;
-max-width:1200px;
+max-width:1100px;
 margin:auto;
 }
 
 .title{
 text-align:center;
-font-size:34px;
-margin-bottom:35px;
+font-size:30px;
+margin-bottom:25px;
 color:#5b0000;
 }
 
+/* TOUR CARDS */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
 }
 
 .card{
 background:white;
-padding:25px;
-border-radius:14px;
-box-shadow:0 6px 15px rgba(0,0,0,0.08);
-transition:0.3s;
+padding:20px;
+border-radius:12px;
 text-align:center;
+box-shadow:0 5px 12px rgba(0,0,0,0.08);
+transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 12px 22px rgba(0,0,0,0.15);
+transform:translateY(-5px);
 }
 
 .card h3{
-margin-bottom:15px;
 color:#5b0000;
+margin-bottom:10px;
 }
 
+/* GALLERY */
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:18px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:15px;
 }
 
 .gallery img{
 width:100%;
-height:230px;
+height:220px;
 object-fit:cover;
+border-radius:10px;
+}
+
+/* FACTS */
+.facts{
+background:white;
+padding:25px;
 border-radius:12px;
+box-shadow:0 5px 10px rgba(0,0,0,0.08);
+}
+
+/* CONTACT */
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.contact-card{
+background:white;
+padding:25px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 5px 12px rgba(0,0,0,0.08);
 transition:0.3s;
 }
 
-.gallery img:hover{
-transform:scale(1.03);
+.contact-card:hover{
+transform:translateY(-5px);
 }
 
-.facts{
-background:#fff;
-border-radius:15px;
-padding:30px;
-box-shadow:0 5px 12px rgba(0,0,0,0.08);
+.icon{
+font-size:30px;
+margin-bottom:10px;
+display:block;
+color:#5b0000;
 }
 
-.facts ul{
-padding-left:20px;
-}
-
+/* FOOTER */
 footer{
 background:#111;
 color:white;
-padding:30px;
 text-align:center;
+padding:25px;
 margin-top:40px;
 }
 
-@keyframes fadeIn{
-from{opacity:0; transform:translateY(20px);}
-to{opacity:1; transform:translateY(0);}
-}
-
 @media(max-width:768px){
-
-header h1{
-font-size:26px;
+.hero-box h2{
+font-size:28px;
 }
-
-.overlay h2{
-font-size:30px;
-}
-
-.overlay p{
-font-size:16px;
-}
-
-nav a{
-display:block;
-margin:10px 0;
-}
-
-.hero{
-height:420px;
-}
-
 }
 </style>
+
 </head>
 
 <body>
@@ -221,22 +216,21 @@ height:420px;
 <a href="#about">About</a>
 <a href="#tour">Tour</a>
 <a href="#gallery">Gallery</a>
-<a href="#facts">Facts</a>
 <a href="#contact">Contact</a>
 </nav>
 
 <section class="hero">
-<div class="overlay">
-<h2>Welcome to the House of the People</h2>
-<p>Explore Parliament through an interactive digital visitor experience.</p>
-<a href="#tour" class="btn">Start Virtual Tour</a>
+<div class="hero-box">
+<h2>Welcome to Parliament</h2>
+<p>Explore the House of the People through a digital experience.</p>
+<a href="#tour" class="btn">Start Tour</a>
 </div>
 </section>
 
 <section id="about">
 <h2 class="title">About Parliament</h2>
-<p style="text-align:center; max-width:850px; margin:auto;">
-The National Parliament of Papua New Guinea is the supreme law-making institution of the nation and represents citizens through elected Members of Parliament.
+<p style="text-align:center;">
+The National Parliament of Papua New Guinea is the supreme law-making institution representing all citizens through elected Members of Parliament.
 </p>
 </section>
 
@@ -246,33 +240,23 @@ The National Parliament of Papua New Guinea is the supreme law-making institutio
 <div class="grid">
 
 <div class="card">
-<h3>Main Chamber</h3>
-<p>Where debates are held and laws are passed.</p>
+<h3>🏛 Main Chamber</h3>
+<p>Where laws are debated and passed.</p>
 </div>
 
 <div class="card">
-<h3>Grand Hall</h3>
-<p>A ceremonial space for important national occasions.</p>
+<h3>🎤 Grand Hall</h3>
+<p>Official ceremonies and national events.</p>
 </div>
 
 <div class="card">
-<h3>Committee Rooms</h3>
-<p>Where national matters are examined in detail.</p>
+<h3>📑 Committee Rooms</h3>
+<p>Policy discussions and decision-making.</p>
 </div>
 
 <div class="card">
-<h3>Speaker's Wing</h3>
-<p>Office and leadership spaces within Parliament.</p>
-</div>
-
-<div class="card">
-<h3>Library</h3>
-<p>Knowledge resources supporting parliamentary work.</p>
-</div>
-
-<div class="card">
-<h3>Parliament Grounds</h3>
-<p>Architecture, gardens, and public spaces.</p>
+<h3>👔 Speaker’s Office</h3>
+<p>Leadership and parliamentary administration.</p>
 </div>
 
 </div>
@@ -289,27 +273,55 @@ The National Parliament of Papua New Guinea is the supreme law-making institutio
 </div>
 </section>
 
-<section id="facts">
+<section>
 <h2 class="title">Parliament Facts</h2>
 
 <div class="facts">
 <ul>
-<li>Papua New Guinea became independent in 1975.</li>
-<li>The National Parliament is the law-making body of the nation.</li>
-<li>Members of Parliament represent electorates across the country.</li>
-<li>The Parliament building is one of PNG’s most recognised landmarks.</li>
+<li>Papua New Guinea gained independence in 1975.</li>
+<li>Parliament is the highest law-making body.</li>
+<li>Members represent constituencies nationwide.</li>
+<li>The Parliament House is a national landmark.</li>
 </ul>
 </div>
-
 </section>
 
 <section id="contact">
-<h2 class="title">Contact</h2>
-<p style="text-align:center;">
-National Parliament of Papua New Guinea<br>
-Port Moresby, National Capital District<br>
-Papua New Guinea
-</p>
+<h2 class="title">Contact Parliament</h2>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+<span class="icon">📍</span>
+<h3>Address</h3>
+<p>National Parliament House<br>Port Moresby, PNG</p>
+</div>
+
+<div class="contact-card">
+<span class="icon">📞</span>
+<h3>Phone</h3>
+<p>(+675) 327 7000</p>
+</div>
+
+<div class="contact-card">
+<span class="icon">📧</span>
+<h3>Email</h3>
+<p>info@parliament.gov.pg</p>
+</div>
+
+<div class="contact-card">
+<span class="icon">🕒</span>
+<h3>Hours</h3>
+<p>Mon–Fri<br>8:30 AM – 4:30 PM</p>
+</div>
+
+</div>
+
+<div style="text-align:center; margin-top:25px;">
+<a href="tel:+6753277000" class="btn">Call Now</a>
+<a href="mailto:info@parliament.gov.pg" class="btn">Email</a>
+</div>
+
 </section>
 
 <footer>
