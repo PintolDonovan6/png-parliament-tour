@@ -62,7 +62,6 @@ box-shadow:0 4px 10px rgba(0,0,0,0.25);
 
 .mascot-float img{
 width:95px;
-height:auto;
 display:block;
 }
 
@@ -138,45 +137,59 @@ margin-bottom:20px;
 color:#0b3d2e;
 }
 
-/* TOUR */
+/* CARDS */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:15px;
 }
 
 .card{
 background:#fff;
-padding:18px;
+padding:15px;
 border-radius:12px;
 text-align:center;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
 border:1px solid #ddd;
+transition:0.3s;
+text-decoration:none;
+color:#111;
+display:block;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:gold;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:10px;
 }
 
 .card h3{
 color:#0b3d2e;
+margin-bottom:6px;
 }
 
-/* GALLERY */
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:12px;
+/* TOUR DETAIL */
+.tour-detail{
+background:#f7f7f7;
+border-left:5px solid gold;
+padding:25px;
+border-radius:12px;
+margin-bottom:25px;
 }
 
-.gallery img{
+.tour-detail img{
 width:100%;
-height:210px;
-object-fit:cover;
-border-radius:10px;
-transition:0.3s;
-border:2px solid #eee;
-}
-
-.gallery img:hover{
-transform:scale(1.03);
-border-color:gold;
+max-width:700px;
+display:block;
+margin:15px auto;
+border-radius:12px;
 }
 
 /* CONTACT */
@@ -205,15 +218,11 @@ margin-top:30px;
 border-top:3px solid gold;
 }
 
-/* MOBILE */
 @media(max-width:768px){
 .mascot-float{
 position:static;
 display:inline-block;
 margin-top:10px;
-}
-header{
-padding-bottom:15px;
 }
 header h1{
 font-size:24px;
@@ -224,7 +233,6 @@ font-size:24px;
 
 <body>
 
-<!-- HEADER -->
 <header>
 
 <div class="mascot-float">
@@ -238,61 +246,80 @@ font-size:24px;
 
 </header>
 
-<!-- NAV -->
 <nav>
 <a href="#">Home</a>
 <a href="#tour">Tour</a>
-<a href="#gallery">Gallery</a>
+<a href="#virtual">Virtual Tour</a>
 <a href="#contact">Contact</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
 <div class="hero-box">
 <h2>Welcome to Parliament</h2>
-<p>Explore the House of the People of Papua New Guinea</p>
+<p>Click any location below to begin your virtual experience.</p>
 <a href="#tour" class="btn">Start Tour</a>
 </div>
 </section>
 
-<!-- TOUR -->
+<!-- CLICKABLE TOUR CARDS -->
 <section id="tour">
-<h2 class="title">Virtual Tour</h2>
+<h2 class="title">Choose a Tour Location</h2>
 
 <div class="grid">
 
-<div class="card">
-<h3>Main Chamber</h3>
-<p>Debates and law making</p>
-</div>
+<a href="#aerial" class="card">
+<img src="Aerial View.JPG">
+<h3>Aerial View</h3>
+<p>See Parliament from above.</p>
+</a>
 
-<div class="card">
-<h3>Grand Hall</h3>
-<p>Official ceremonies</p>
-</div>
+<a href="#chambers" class="card">
+<img src="Chambers.JPG">
+<h3>Main Chambers</h3>
+<p>Enter the debating chamber.</p>
+</a>
 
-<div class="card">
-<h3>Committee Rooms</h3>
-<p>Policy discussions</p>
-</div>
+<a href="#hill" class="card">
+<img src="Independence Hill.JPG">
+<h3>Independence Hill</h3>
+<p>Discover history and symbolism.</p>
+</a>
 
-<div class="card">
-<h3>Speaker Office</h3>
-<p>Leadership area</p>
-</div>
+<a href="#front" class="card">
+<img src="T-Front.JPG">
+<h3>Front Entrance</h3>
+<p>View the iconic front entrance.</p>
+</a>
 
 </div>
 </section>
 
-<!-- GALLERY -->
-<section id="gallery">
-<h2 class="title">Gallery</h2>
+<!-- TOUR DESTINATIONS -->
+<section id="virtual">
+<h2 class="title">Virtual Tour Experience</h2>
 
-<div class="gallery">
-<img src="Aerial View.JPG" alt="Aerial View">
-<img src="Chambers.JPG" alt="Chambers">
-<img src="Independence Hill.JPG" alt="Independence Hill">
-<img src="T-Front.JPG" alt="Front View">
+<div id="aerial" class="tour-detail">
+<h3>Aerial View</h3>
+<img src="Aerial View.JPG">
+<p>Experience the full Parliament complex from above and appreciate the architecture, grounds and surrounding landscape.</p>
+</div>
+
+<div id="chambers" class="tour-detail">
+<h3>Main Chambers</h3>
+<img src="Chambers.JPG">
+<p>This is where Members of Parliament debate national issues, pass laws and represent the people of Papua New Guinea.</p>
+</div>
+
+<div id="hill" class="tour-detail">
+<h3>Independence Hill</h3>
+<img src="Independence Hill.JPG">
+<p>Independence Hill represents the nation’s democratic journey and historical milestones since 1975.</p>
+</div>
+
+<div id="front" class="tour-detail">
+<h3>Front Entrance</h3>
+<img src="T-Front.JPG">
+<p>The front entrance is one of the most recognised national landmarks and a symbol of governance.</p>
 </div>
 
 </section>
@@ -302,17 +329,14 @@ font-size:24px;
 <h2 class="title">Contact Parliament</h2>
 
 <div class="contact-grid">
-
 <div class="contact-card">📍<br>Port Moresby, PNG</div>
 <div class="contact-card">📞<br>(+675) 327 7000</div>
 <div class="contact-card">📧<br>info@parliament.gov.pg</div>
 <div class="contact-card">🕒<br>8:30 AM – 4:30 PM</div>
-
 </div>
 
 </section>
 
-<!-- FOOTER -->
 <footer>
 <p>© 2026 National Parliament PNG Virtual Tour</p>
 </footer>
