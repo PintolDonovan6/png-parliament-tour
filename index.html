@@ -19,15 +19,16 @@ background:#ffffff;
 color:#111;
 }
 
-/* HEADER FIXED */
+/* HEADER */
 header{
-background:#0b3d2e; /* DARK GREEN */
+background:#0b3d2e;
 text-align:center;
 padding:25px;
 border-bottom:4px solid gold;
+position:relative;
 }
 
-header img{
+header img.logo{
 width:150px;
 max-width:70%;
 background:white;
@@ -41,13 +42,28 @@ header h1{
 color:white;
 font-size:28px;
 margin-bottom:5px;
-text-shadow:1px 1px 2px rgba(0,0,0,0.5);
 }
 
 header p{
 color:white;
 font-size:14px;
-opacity:0.95;
+}
+
+/* MASCOT */
+.mascot-float{
+position:absolute;
+right:20px;
+top:20px;
+background:white;
+padding:6px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.25);
+}
+
+.mascot-float img{
+width:95px;
+height:auto;
+display:block;
 }
 
 /* NAV */
@@ -142,36 +158,25 @@ border:1px solid #ddd;
 color:#0b3d2e;
 }
 
-/* MASCOT */
-.mascot{
-text-align:center;
-margin-top:20px;
-}
-
-.mascot img{
-width:160px;
-border-radius:10px;
-border:2px solid gold;
-}
-
 /* GALLERY */
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:10px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:12px;
 }
 
 .gallery img{
 width:100%;
-height:200px;
+height:210px;
 object-fit:cover;
 border-radius:10px;
-cursor:pointer;
 transition:0.3s;
+border:2px solid #eee;
 }
 
 .gallery img:hover{
 transform:scale(1.03);
+border-color:gold;
 }
 
 /* CONTACT */
@@ -200,16 +205,37 @@ margin-top:30px;
 border-top:3px solid gold;
 }
 
+/* MOBILE */
+@media(max-width:768px){
+.mascot-float{
+position:static;
+display:inline-block;
+margin-top:10px;
+}
+header{
+padding-bottom:15px;
+}
+header h1{
+font-size:24px;
+}
+}
 </style>
 </head>
 
 <body>
 
-<!-- HEADER FIXED -->
+<!-- HEADER -->
 <header>
-<img src="PNG Parliament Logo-01.png">
+
+<div class="mascot-float">
+<img src="Mascot" alt="Mascot">
+</div>
+
+<img src="PNG Parliament Logo-01.png" class="logo" alt="Logo">
+
 <h1>National Parliament of Papua New Guinea</h1>
 <p>Virtual Tour & Public Information Portal</p>
+
 </header>
 
 <!-- NAV -->
@@ -229,17 +255,12 @@ border-top:3px solid gold;
 </div>
 </section>
 
-<!-- MASCOT -->
-<div class="mascot">
-<img src="Mascot">
-<p><b>Parliament Mascot</b></p>
-</div>
-
 <!-- TOUR -->
 <section id="tour">
 <h2 class="title">Virtual Tour</h2>
 
 <div class="grid">
+
 <div class="card">
 <h3>Main Chamber</h3>
 <p>Debates and law making</p>
@@ -259,8 +280,8 @@ border-top:3px solid gold;
 <h3>Speaker Office</h3>
 <p>Leadership area</p>
 </div>
-</div>
 
+</div>
 </section>
 
 <!-- GALLERY -->
@@ -268,10 +289,10 @@ border-top:3px solid gold;
 <h2 class="title">Gallery</h2>
 
 <div class="gallery">
-<img src="T-Front.JPG">
-<img src="Mascot">
-<img src="T-Front.JPG">
-<img src="Mascot">
+<img src="Aerial View.JPG" alt="Aerial View">
+<img src="Chambers.JPG" alt="Chambers">
+<img src="Independence Hill.JPG" alt="Independence Hill">
+<img src="T-Front.JPG" alt="Front View">
 </div>
 
 </section>
