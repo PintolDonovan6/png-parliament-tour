@@ -50,11 +50,12 @@ color:white;
 font-size:14px;
 }
 
-/* BIG WAVING MASCOT */
+/* MASCOT FIXED */
 .mascot-float{
 position:absolute;
 right:20px;
 top:15px;
+z-index:5;
 background:white;
 padding:8px;
 border-radius:14px;
@@ -64,16 +65,17 @@ animation:bob 2s ease-in-out infinite;
 
 .mascot-float img{
 width:130px;
+height:auto;
 display:block;
 transform-origin:bottom center;
 animation:wave 1.6s ease-in-out infinite;
 }
 
-/* mascot text */
 .mascot-call{
 position:absolute;
 right:165px;
 top:55px;
+z-index:6;
 background:gold;
 color:#111;
 padding:8px 12px;
@@ -295,7 +297,7 @@ height:260px;
 <div class="mascot-call">Come Explore!</div>
 
 <div class="mascot-float">
-<img src="Mascot" alt="Mascot">
+<img src="Mascot.png" alt="Mascot">
 </div>
 
 <img src="PNG Parliament Logo-01.png" class="logo" alt="Logo">
