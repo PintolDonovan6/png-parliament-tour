@@ -184,12 +184,15 @@ border-radius:12px;
 margin-bottom:25px;
 }
 
-.tour-detail img{
+.tour-detail img,
+.tour-detail iframe{
 width:100%;
 max-width:700px;
 display:block;
 margin:15px auto;
 border-radius:12px;
+height:420px;
+border:0;
 }
 
 /* CONTACT */
@@ -226,6 +229,9 @@ margin-top:10px;
 }
 header h1{
 font-size:24px;
+}
+.tour-detail iframe{
+height:260px;
 }
 }
 </style>
@@ -300,7 +306,13 @@ font-size:24px;
 
 <div id="aerial" class="tour-detail">
 <h3>Aerial View</h3>
-<img src="Aerial View.JPG">
+
+<iframe
+src="https://www.youtube.com/embed/Gwruh7Dax1w"
+title="Aerial View Tour"
+allowfullscreen>
+</iframe>
+
 <p>Experience the full Parliament complex from above and appreciate the architecture, grounds and surrounding landscape.</p>
 </div>
 
@@ -318,7 +330,13 @@ font-size:24px;
 
 <div id="front" class="tour-detail">
 <h3>Front Entrance</h3>
-<img src="T-Front.JPG">
+
+<iframe
+src="https://www.youtube.com/embed/THvGsPREbHw"
+title="Front Entrance Tour"
+allowfullscreen>
+</iframe>
+
 <p>The front entrance is one of the most recognised national landmarks and a symbol of governance.</p>
 </div>
 
