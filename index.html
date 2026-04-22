@@ -50,62 +50,61 @@ color:white;
 font-size:14px;
 }
 
-/* MASCOT FIXED */
+/* LIVE MASCOT */
 .mascot-float{
 position:absolute;
 right:20px;
 top:15px;
 z-index:5;
-background:white;
-padding:8px;
-border-radius:14px;
-box-shadow:0 4px 10px rgba(0,0,0,0.25);
-animation:bob 2s ease-in-out infinite;
+animation:walkAround 8s linear infinite;
 }
 
 .mascot-float img{
-width:130px;
+width:150px;
 height:auto;
 display:block;
 transform-origin:bottom center;
-animation:wave 1.6s ease-in-out infinite;
+animation:waveHand 1.2s ease-in-out infinite;
+filter:drop-shadow(0 6px 12px rgba(0,0,0,0.25));
 }
 
 .mascot-call{
 position:absolute;
-right:165px;
+right:190px;
 top:55px;
 z-index:6;
 background:gold;
 color:#111;
-padding:8px 12px;
-border-radius:20px;
+padding:10px 14px;
+border-radius:22px;
 font-weight:bold;
 font-size:14px;
 box-shadow:0 4px 10px rgba(0,0,0,0.2);
-animation:pulse 1.8s infinite;
+animation:callBounce 1.4s ease-in-out infinite;
 }
 
 /* ANIMATIONS */
-@keyframes wave{
+@keyframes waveHand{
 0%{transform:rotate(0deg);}
-20%{transform:rotate(8deg);}
-40%{transform:rotate(-8deg);}
-60%{transform:rotate(8deg);}
-80%{transform:rotate(-4deg);}
+20%{transform:rotate(10deg);}
+40%{transform:rotate(-10deg);}
+60%{transform:rotate(10deg);}
+80%{transform:rotate(-6deg);}
 100%{transform:rotate(0deg);}
 }
 
-@keyframes bob{
-0%{transform:translateY(0);}
-50%{transform:translateY(-6px);}
-100%{transform:translateY(0);}
+@keyframes callBounce{
+0%{transform:translateY(0) scale(1);}
+50%{transform:translateY(-6px) scale(1.06);}
+100%{transform:translateY(0) scale(1);}
 }
 
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.06);}
-100%{transform:scale(1);}
+@keyframes walkAround{
+0%{transform:translateX(0);}
+25%{transform:translateX(-25px);}
+50%{transform:translateX(0);}
+75%{transform:translateX(25px);}
+100%{transform:translateX(0);}
 }
 
 /* NAV */
@@ -271,6 +270,7 @@ border-top:3px solid gold;
 position:static;
 display:inline-block;
 margin-top:10px;
+animation:bounceMobile 2s ease-in-out infinite;
 }
 
 .mascot-call{
@@ -285,6 +285,12 @@ font-size:24px;
 
 .tour-detail iframe{
 height:260px;
+}
+
+@keyframes bounceMobile{
+0%{transform:translateY(0);}
+50%{transform:translateY(-8px);}
+100%{transform:translateY(0);}
 }
 }
 </style>
@@ -359,26 +365,26 @@ height:260px;
 
 <div id="aerial" class="tour-detail">
 <h3>Aerial View</h3>
-<iframe src="https://www.youtube.com/embed/Gwruh7Dax1w" title="Aerial View Tour" allowfullscreen></iframe>
-<p>Experience the full Parliament complex from above and appreciate the architecture, grounds and surrounding landscape.</p>
+<iframe src="https://www.youtube.com/embed/Gwruh7Dax1w" allowfullscreen></iframe>
+<p>Experience the full Parliament complex from above and appreciate the architecture and grounds.</p>
 </div>
 
 <div id="chambers" class="tour-detail">
 <h3>Main Chambers</h3>
 <img src="Chambers.JPG">
-<p>This is where Members of Parliament debate national issues, pass laws and represent the people of Papua New Guinea.</p>
+<p>This is where Members of Parliament debate national issues and pass laws.</p>
 </div>
 
 <div id="hill" class="tour-detail">
 <h3>Independence Hill</h3>
 <img src="Independence Hill.JPG">
-<p>Independence Hill represents the nation’s democratic journey and historical milestones since 1975.</p>
+<p>Independence Hill represents the nation’s democratic journey.</p>
 </div>
 
 <div id="front" class="tour-detail">
 <h3>Front Entrance</h3>
-<iframe src="https://www.youtube.com/embed/THvGsPREbHw" title="Front Entrance Tour" allowfullscreen></iframe>
-<p>The front entrance is one of the most recognised national landmarks and a symbol of governance.</p>
+<iframe src="https://www.youtube.com/embed/THvGsPREbHw" allowfullscreen></iframe>
+<p>The front entrance is one of the most recognised national landmarks.</p>
 </div>
 
 </section>
