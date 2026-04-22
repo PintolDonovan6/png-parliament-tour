@@ -26,6 +26,7 @@ text-align:center;
 padding:25px;
 border-bottom:4px solid gold;
 position:relative;
+overflow:hidden;
 }
 
 header img.logo{
@@ -49,20 +50,60 @@ color:white;
 font-size:14px;
 }
 
-/* MASCOT */
+/* BIG WAVING MASCOT */
 .mascot-float{
 position:absolute;
 right:20px;
-top:20px;
+top:15px;
 background:white;
-padding:6px;
-border-radius:12px;
+padding:8px;
+border-radius:14px;
 box-shadow:0 4px 10px rgba(0,0,0,0.25);
+animation:bob 2s ease-in-out infinite;
 }
 
 .mascot-float img{
-width:95px;
+width:130px;
 display:block;
+transform-origin:bottom center;
+animation:wave 1.6s ease-in-out infinite;
+}
+
+/* mascot text */
+.mascot-call{
+position:absolute;
+right:165px;
+top:55px;
+background:gold;
+color:#111;
+padding:8px 12px;
+border-radius:20px;
+font-weight:bold;
+font-size:14px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+animation:pulse 1.8s infinite;
+}
+
+/* ANIMATIONS */
+@keyframes wave{
+0%{transform:rotate(0deg);}
+20%{transform:rotate(8deg);}
+40%{transform:rotate(-8deg);}
+60%{transform:rotate(8deg);}
+80%{transform:rotate(-4deg);}
+100%{transform:rotate(0deg);}
+}
+
+@keyframes bob{
+0%{transform:translateY(0);}
+50%{transform:translateY(-6px);}
+100%{transform:translateY(0);}
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.06);}
+100%{transform:scale(1);}
 }
 
 /* NAV */
@@ -221,15 +262,25 @@ margin-top:30px;
 border-top:3px solid gold;
 }
 
+/* MOBILE */
 @media(max-width:768px){
+
 .mascot-float{
 position:static;
 display:inline-block;
 margin-top:10px;
 }
+
+.mascot-call{
+position:static;
+display:inline-block;
+margin:10px auto 0;
+}
+
 header h1{
 font-size:24px;
 }
+
 .tour-detail iframe{
 height:260px;
 }
@@ -240,6 +291,8 @@ height:260px;
 <body>
 
 <header>
+
+<div class="mascot-call">Come Explore!</div>
 
 <div class="mascot-float">
 <img src="Mascot" alt="Mascot">
@@ -267,7 +320,6 @@ height:260px;
 </div>
 </section>
 
-<!-- CLICKABLE TOUR CARDS -->
 <section id="tour">
 <h2 class="title">Choose a Tour Location</h2>
 
@@ -300,19 +352,12 @@ height:260px;
 </div>
 </section>
 
-<!-- TOUR DESTINATIONS -->
 <section id="virtual">
 <h2 class="title">Virtual Tour Experience</h2>
 
 <div id="aerial" class="tour-detail">
 <h3>Aerial View</h3>
-
-<iframe
-src="https://www.youtube.com/embed/Gwruh7Dax1w"
-title="Aerial View Tour"
-allowfullscreen>
-</iframe>
-
+<iframe src="https://www.youtube.com/embed/Gwruh7Dax1w" title="Aerial View Tour" allowfullscreen></iframe>
 <p>Experience the full Parliament complex from above and appreciate the architecture, grounds and surrounding landscape.</p>
 </div>
 
@@ -330,19 +375,12 @@ allowfullscreen>
 
 <div id="front" class="tour-detail">
 <h3>Front Entrance</h3>
-
-<iframe
-src="https://www.youtube.com/embed/THvGsPREbHw"
-title="Front Entrance Tour"
-allowfullscreen>
-</iframe>
-
+<iframe src="https://www.youtube.com/embed/THvGsPREbHw" title="Front Entrance Tour" allowfullscreen></iframe>
 <p>The front entrance is one of the most recognised national landmarks and a symbol of governance.</p>
 </div>
 
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
 <h2 class="title">Contact Parliament</h2>
 
